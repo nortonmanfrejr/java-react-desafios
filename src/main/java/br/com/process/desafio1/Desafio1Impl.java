@@ -1,8 +1,10 @@
 package br.com.process.desafio1;
 
+import br.com.process.DesafioInterface;
+
 import java.util.*;
 
-public class Desafio1Impl {
+public class Desafio1Impl implements DesafioInterface {
 
     private int qntdNum;
     private List<Integer> arrayList = new ArrayList<>();
@@ -10,6 +12,7 @@ public class Desafio1Impl {
     private final Scanner sc = new Scanner(System.in);
 
 
+    @Override
     public void startChallenge() {
         System.out.println("----------- Desafio 1 -----------");
 
@@ -26,7 +29,7 @@ public class Desafio1Impl {
 
         unionArrayList(arrayPar,arrayImpar); // limpa e junta as ArrayList
 
-        print(); // sout nas listas
+        print(); // saida da lista
     }
 
     /**
@@ -75,10 +78,10 @@ public class Desafio1Impl {
      * @return ArrayList unidas e organizadas
      * */
     private List<Integer> unionArrayList(List<Integer> array1, List<Integer> array2) {
-        arrayList.clear();
+        arrayList.clear(); // limpa a lista
 
-        arrayList.addAll(array1);
-        arrayList.addAll(array2);
+        arrayList.addAll(array1); // adiciona a array1
+        arrayList.addAll(array2); // adiciona a array2
 
         return arrayList;
     }

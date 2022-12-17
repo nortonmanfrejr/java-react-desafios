@@ -1,8 +1,10 @@
 package br.com.process.desafio1;
 
+import br.com.process.DesafioInterface;
+
 public class Desafio1 {
 
-    static Desafio1Impl run = new Desafio1Impl();
+    static DesafioInterface run = new Desafio1Impl();
     public static void main(String[] args){
         run.startChallenge();
     }
